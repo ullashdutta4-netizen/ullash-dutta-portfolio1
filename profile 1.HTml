@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ullash Dutta - সফটওয়্যার ডেভেলপার</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* CSS কোড: আধুনিক এবং পেশাদার ডিজাইন */
+        :root {
+            --primary-color: #007bff; /* নীল (Web Developer-এর জন্য উপযুক্ত) */
+            --accent-color: #28a745; /* সবুজ (হাইলাইট এবং সাফল্যের জন্য) */
+            --text-color: #343a40;
+            --secondary-text: #6c757d;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-container {
+            display: flex;
+            width: 90%;
+            max-width: 1100px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+        }
+
+        /* বাম এবং মাঝের অংশ */
+        .main-content {
+            flex: 2;
+            padding: 40px;
+        }
+
+        /* ডানদিকের হাইলাইট অংশ */
+        .highlight-card {
+            flex: 1;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-header h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .profile-header p {
+            color: var(--secondary-text);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* ডিটেইলস সেকশন */
+        .details-section {
+            margin-bottom: 40px;
+        }
+
+        .details-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .detail-item {
+            display: flex;
+            margin-bottom: 12px;
+            font-size: 1em;
+        }
+
+        .detail-item strong {
+            width: 100px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .detail-item span {
+            color: var(--secondary-text);
+        }
+
+        /* সোশাল আইকনস (বাম দিকে) */
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-right: 18px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+        
+        /* About me সেকশন */
+        .about-me-section {
+            margin-top: 20px;
+        }
+
+        .about-me-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .about-me-section p {
+            text-align: justify;
+            margin-bottom: 25px;
+            color: var(--secondary-text);
+            font-size: 1.05em;
+        }
+
+        /* Contact Me বাটন */
+        .contact-button {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* ডানদিকের হাইলাইট কার্ডের স্টাইল */
+        .highlight-card h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+
+        .highlight-card p {
+            font-size: 1.1em;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        /* প্রোফাইল ছবি */
+        .profile-image-wrapper {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid white; /* সাদা বর্ডার */
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .profile-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* হাইলাইট কার্ডের সোশ্যাল আইকন */
+        .highlight-social a {
+            color: white;
+            font-size: 1.6em;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        .highlight-social {
+            margin-top: 25px;
+        }
+
+        .highlight-social a:hover {
+            color: var(--primary-color); 
+        }
+
+        /* মিডিয়া কোয়েরি: রেসপনসিভনেস */
+        @media (max-width: 900px) {
+            .profile-container {
+                flex-direction: column;
+                width: 95%;
+                margin: 20px 0;
+            }
+
+            .main-content {
+                padding: 30px;
+            }
+
+            .highlight-card {
+                padding: 30px;
+                border-radius: 0 0 15px 15px;
+            }
+            
+            .profile-image-wrapper {
+                margin-top: 0;
+                width: 150px;
+                height: 150px;
+            }
+        }
+        /* CSS কোড শেষ */
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        
+        <div class="main-content">
+            <header class="profile-header">
+                <h1 id="profileTitle">Profile</h1>
+                <p id="profileTagline">I'm a dedicated Software Developer</p>
+            </header>
+
+            <section class="details-section">
+                <h2>ব্যক্তিগত বিবরণ</h2>
+                <div class="detail-item"><strong>Name:</strong> <span id="userName"></span></div>
+                <div class="detail-item"><strong>Age:</strong> <span id="userAge"></span></div>
+                <div class="detail-item"><strong>Location:</strong> <span id="userLocation"></span></div>
+                <div class="detail-item"><strong>Email:</strong> <span id="userEmail"></span></div>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ullash-dutta" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ullash-dutta" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </section>
+
+            <section class="about-me-section">
+                <h2>আমার সম্পর্কে</h2>
+                <p id="aboutMeText">
+                    </p>
+                <a id="contactButtonLink" href="mailto:ullash.dutta@example.com" class="contact-button">CONTACT ME</a>
+            </section>
+        </div>
+
+        <div class="highlight-card">
+            <div class="profile-image-wrapper">
+                <img id="profileImage" src="profile-placeholder.png" alt="Ullash Dutta Profile Picture">
+            </div>
+            
+            <h2 id="highlightName"></h2>
+            <p id="highlightDescription">
+                </p>
+
+            <div class="highlight-social">
+                 <a href="https://www.linkedin.com/in/ullash-dutta" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/ullash-dutta" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateProfile(data) {
+            // ব্যক্তিগত বিবরণ আপডেট
+            document.getElementById('userName').textContent = data.name;
+            document.getElementById('userAge').textContent = data.age;
+            document.getElementById('userLocation').textContent = data.location;
+            document.getElementById('userEmail').textContent = data.email;
+            
+            // About Me আপডেট
+            document.getElementById('aboutMeText').textContent = data.aboutMe;
+            
+            // হাইলাইট কার্ড আপডেট
+            document.getElementById('highlightName').textContent = 'HELLO, I\'M ' + data.highlightName.toUpperCase();
+            document.getElementById('highlightDescription').textContent = data.highlightDescription;
+            
+            // ছবি আপডেট (placeholder-এর বদলে আপনার ছবির পাথ দিন)
+            document.getElementById('profileImage').src = data.profileImageUrl;
+
+            // ইমেইল লিঙ্ক আপডেট
+            document.getElementById('contactButtonLink').href = 'mailto:' + data.email;
+
+            // Header-এ Title আপডেট
+            document.title = data.name + ' - ' + document.getElementById('profileTagline').textContent;
+        }
+
+        // --- আপনার তথ্য এখানে দিন ---
+        const myProfileData = {
+            name: "Ullash Dutta",
+            age: "24 years (অনুমানিক)",
+            location: "Rangamati",
+            email: "ullashdutta13@gmail.com", 
+            
+            aboutMe: "আমি একজন অভিজ্ঞ সফটওয়্যার ডেভেলপার, যিনি আধুনিক প্রযুক্তির মাধ্যমে জটিল সমস্যা সমাধানে বিশেষজ্ঞ। আমার প্রধান দক্ষতা হলো Full-stack Development (যেমনঃ React, Node.js) এবং দক্ষ কোড লেখা। আমি উদ্ভাবনী প্রোডাক্ট তৈরি করতে এবং টিমের সাথে কাজ করতে আগ্রহী। নতুন চ্যালেঞ্জ নিতে আমি সবসময় প্রস্তুত।",
+            
+            highlightName: "Ullash",
+            highlightDescription: "একজন প্রতিশ্রুতিবদ্ধ Full-stack ডেভেলপার, যিনি UI/UX ডিজাইন এবং নির্ভরযোগ্য ব্যাকএন্ড আর্কিটেকচার বাস্তবায়নে পারদর্শী।",
+            
+            
+            profileImageUrl: "ud2323.jpg" 
+        };
+        // -----------------------------
+
+        // ফাংশনটি কল করা হচ্ছে
+        updateProfile(myProfileData);
+
+        // হোভার ইন্টারেকশন (জাভাস্ক্রিপ্ট)
+        const contactButton = document.getElementById('contactButtonLink');
+        contactButton.addEventListener('mouseover', () => {
+            contactButton.textContent = "Send Email";
+        });
+        contactButton.addEventListener('mouseout', () => {
+            contactButton.textContent = "CONTACT ME";
+        });
+
+    </script>
+</body>
+</html>
